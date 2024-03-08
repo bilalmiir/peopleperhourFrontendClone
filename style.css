@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #e9ecf2;
+    font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+}
+
+.container {
+    width: 1200px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+nav {
+    height: 100px;
+}
+
+.navbar-container {
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 25px;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo h1 {
+    font-size: 40px;
+}
+
+.logo h2 {
+    font-size: 38px;
+    font-weight: lighter;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+ul li {
+    margin-right: 2rem;
+}
+
+ul a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #47494f;
+}
+
+.menu-bars {
+    display: none;
+    color: #47494f;
+    cursor: pointer;
+}
+
+.categories {
+    background-color: #fff;
+    height: 30%;
+}
+
+.category-box {
+    align-items: center;
+    height: 100%;
+}
+
+.category-box a {
+    font-size: 12px;
+    color: #5B6678;
+}
+
+.category-box li {
+    margin-right: 2rem;
+}
+
+.mobViewLi {
+    display: none;
+}
+
+.header-box {
+    margin: 5rem auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header-text {
+    flex: 0 0 50%;
+    margin: auto 0;
+}
+
+.header-text h1 {
+    font-size: 7.4rem;
+    color: rgb(74, 57, 172);
+    margin-bottom: 2.4rem;
+    font-weight: 900;
+    animation: headingAnimation 20s infinite;
+}
+
+@keyframes headingAnimation {
+    0% {
+        color: rgb(74, 57, 172);
+
+    }
+
+    25% {
+        color: rgb(185, 37, 40);
+    }
+
+    50% {
+        color: rgb(231, 149, 10);
+        ;
+    }
+
+    75% {
+        color: rgb(224, 33, 27);
+    }
+
+    100% {
+        color: rgb(74, 57, 172);
+    }
+}
+
+.header-text p {
+    font-size: 2.1rem;
+    margin-bottom: 4.8rem;
+}
+
+.input-box {
+    display: flex;
+}
+
+.input-box input {
+    width: 84%;
+    height: 7.2rem;
+    padding: 1.2rem 2.4rem;
+    font-size: 1.6rem;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border: none;
+}
+
+.input-box .search {
+    width: 12%;
+    background-color: rgb(74, 57, 172);
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    animation: searchAnimation 20s infinite;
+}
+
+@keyframes searchAnimation {
+    0% {
+        background-color: rgb(74, 57, 172);
+
+    }
+
+    25% {
+        background-color: rgb(185, 37, 40);
+    }
+
+    50% {
+        background-color: rgb(231, 149, 10);
+    }
+
+    75% {
+        background-color: rgb(224, 33, 27);
+    }
+
+    100% {
+        background-color: rgb(74, 57, 172);
+    }
+}
+
+.search i {
+    color: #fff;
+}
+
+.headerImg {
+    padding: 240px;
+    background-image: url('./hero-instance-1--desktop.webp');
+    background-size: 580px;
+    object-fit: contain;
+    animation: slideAnimation 20s infinite;
+}
+
+@keyframes slideAnimation {
+    0% {
+        background-image: url('./hero-instance-1--tablet@2x.webp');
+    }
+
+    25% {
+        background-image: url('./hero-instance-2--desktop.webp');
+    }
+
+    50% {
+        background-image: url('./hero-instance-3--desktop.webp');
+    }
+
+    75% {
+        background-image: url('./hero-instance-4--desktop.webp');
+    }
+
+    100% {
+        background-image: url('./hero-instance-1--tablet@2x.webp');
+    }
+}
+
+@media (max-width: 1000px) {
+    .headerBox {
+        flex-direction: column-reverse;
+    }
+
+    .headerImg {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+    }
+
+    .headerText {
+        text-align: center;
+    }
+
+    ul {
+        display: none;
+    }
+
+    .bars {
+        display: block;
+    }
+
+    .mobViewLi {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .headerText h1 {
+        font-size: 33px;
+    }
+
+    .headerText p {
+        font-size: 19px;
+    }
+
+    .headerImg {
+        width: 100%;
+    }
+
+    .inputBox input {
+        height: 4.8rem;
+    }
+}
